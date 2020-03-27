@@ -1,0 +1,32 @@
+Program wypożyczalni został przeze mnie podzielony na 8 klas:
+
+1. Wypozyczalnia (main)
+2.Produkt
+3.Klient
+4.Ksiazka
+5.Ebook
+6.Film
+7.Plyta
+8.Audiobook
+
+Wypozyczalnia
+
+Utworzone zostały różne nowe obiekty z puli (ksiazka,film,ebook,audiobook,plyta) z konkretnymi informacjami na ich temat. Jak i utworzony został obiekt klient, gdzie podane zostały mu jego dane osobowe.
+
+W klasie Wypozyczalnia załadowane jest proste menu, w którym z kolei zaimplementowane są takie działania jak:
+-Wypozyczenia produktów (Tylko jeden produkt naraz + max czas wypożyczenia = 14dni, gdy klient wypożycza produkt to program pobiera date z systemu i zapisuje)
+-Możliwość przyznania kary za produkt(W moim programie jest to 5% ceny produktu)
+-W razie przyznania kary i opłacenia jej przez klienta można ją zniwelować do 0zł 
+-Możliwość oddania produktu przez klienta
+-Jest opcja sprawdzenia czy klient ma karę na koncie(podany stan konta) oraz czy posiada aktualnie wypożyczony produkt(true jeśli ma/ false jeśli nie ma)
+
+Klient nie może wypożyczyć nowego produktu jeżeli nie opłacił kary.
+
+Klasy Ksiazka, Film, Ebook, Audiobook, Plyta dziedziczą z klasy Produkt. Ponadto poza cechami dziedziczonymi z Produktu(int id, String data_wydania, String autor, String wydawnictwo, String tytul, double cena),
+każda klasa pochodna posiada swoje własne dodatkowe cechy.
+Tak w przypadku klasy Ksiazka dołaczone przeze mnie parametry specjalne to: numer stron i typ okładki.
+W przypadku klasy Ebook to: numer strony i rozmiar w mb
+W przypadku klasy Film to: czas trwania w min 
+W przypadku klasy Audiobook to: czas trwania w min i rozmiar w mb
+W przypadku klasy Plyta to: liczba piosenek
+
