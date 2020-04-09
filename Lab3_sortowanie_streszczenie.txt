@@ -1,0 +1,23 @@
+W zrobionym przeze mnie programie do sortowania na podstawie interfejsu Sortable(z dwiema metodami statycznymi) zaimplementowane zostały klasy Bubble i Kubelkowa, klasą główną jest klasa Main.
+
+W klasie Main tworzona jest tabela do posortowania. Ma ona wielkość 200 liczb całkowitych, które ustawione zostały przeze mnie na zakres od 0-9. Liczby w tabeli są w randomowej kolejności.
+W celu losowania liczb został wykorzystany stworzony obiekt klasy Random.
+
+
+Program po uruchomieniu wyświetla wypełnioną losowo tablicę oraz 2 różne sposoby jej posortowania czyli sortowanie bąbelkowe i sortowanie kubełkowe.
+Po wybraniu z menu metody sortowania, wyświetla się posortowana tablica wraz z ilością porównań jaką wykonał program.
+
+
+Klasa Bubble odpowiada za sortowanie bąbelkowe.
+Zaimplementowane metody pozwalają na porównywanie dwóch kolejnych elementów i zamianę ich kolejności, przy użyciu zmiennej tymczasowej.
+
+
+W klasie Kubelkowa(jak sama nazwa mówi, odpowiadającej za sortowanie kubełkowe) szukana jest liczba maksymalna.
+Następnie tworzone są o kubełki o jeden więcej niż wynosi max. W sortowaniu tym każda liczba ma przeznaczony jeden kubełek(tablice).
+W celu uzyskania efektu posortowanej tablicy, wypisywane są liczby przechowywane w kubełkach zgodnie z ich porządkiem.
+
+
+W obu klasach oprócz metody statycznej sort jest też metoda statyczna step_counting wyświetlająca liczbę porównań dla każdego sposobu sortowania.
+
+
+
