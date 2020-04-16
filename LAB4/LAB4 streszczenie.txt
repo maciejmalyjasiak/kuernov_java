@@ -1,0 +1,32 @@
+1) Zamiana string na int
+Program polega na zamianie wprowadzonych przez użytkownika znaków z formatu string na int.
+W przypadku wprowadzenia znaków będących czymś innym niż liczby, wyświetla się błąd: Exception in thread "main" java.lang.NumberFormatException: For input string:"...". 
+Jeśli wprowadzone przez użytkownika dane są liczbami to program zamieni je z typu string na int.
+Gdy występuję wyjątek jak wpisanie litery zamiast liczby, uruchamia się program wewnątrz catch(NumberFormatException e).
+Jeżeli uzytkownik wprowadzi do konsoli cos innego niz sama liczba, zamiast wielu errorow można wyświetlic komunikat, co musi zrobic aby program zaczął działać. Co jest bardzo praktyczne.
+
+
+2)Wybieranie elementu z tablicy
+Program polega na wybieraniu i wyświetlaniu dowolnego elementu z wcześniej utworzonej tablicy.
+Gdy zadeklarowana tablica posiada określoną liczbę elementów, trzeba wybierać elementy z określonej puli.
+W przeciwnym wypadku program nie znajdzie szukanego elementu i wyświetli błąd: "Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index x out of bounds for length y".
+Jeżeli wybrany element znajduje się w tablicy to wyświetlona zostanie przechowywana w nim zawartość.
+Do obsługi wyjątków ponownie służy blok try-catch. Gdy wystąpi wyjątek, czyli gdy wprowadzony element tablicy będzie z poza jej zakresu uruchamia się program wewnątrz catch.
+Również jak w poprzednim przykładzie można wypisać w nim komunikat co użytkownik powinien poprawić, podczas wprowadzania danych, aby program zadziałał poprawnie.
+
+
+3)
+Do programu wypożyczalni z laboratorium 2(opartego na dziedziczeniu), dodana została wspomniana w zadaniu kompozycja.
+Kompozycję uzyskujemy poprzez definiowanie w nowej klasie pól, które są obiektami istniejących klas.
+W klasie Produkt w zmiennej o nazwie wPosiadaniu program oczekuje podania obiektu typu Klient. 
+Cecha ta przeniosła się na klasy dziedziczące: Audiobook, Ebook, Film, Ksiazka, Plyta.
+Podczas tworzenia nowych produktów w klasie Wypozyczalnia, oprócz wypisywania ich danych możemy za pomocą new Klient przypisać przedmiot danemu klientowi.
+Jezeli pod wybrany produkt podpięty jest obiekt klient oznacza to, że produkt jest już w jego posiadaniu i nie może być wypożyczony, a musi zostać oddany.
+Jeśli zamiast klienta jest NULL, to produkt nie jest jeszcze przez nikogo wypożyczony. 
+
+Przykładowo tworzone obiekty klasy Ksiazka:
+Ksiazka ksiazka = new Ksiazka(1, "2019", "Norwa ", "Okon","Na basenie", 69.69, 120,"twarda", new Klient(1,"Adam","Nowrka","1 Maja, Katowice",22));
+Ksiazka ksiazka1 = new Ksiazka(1, "2019", "Norwa ", "Okon","Na basenie", 69.69, 120,"twarda", klient1);
+Ksiazka ksiazka2 = new Ksiazka(2, "2222", "Haha ", "nice","Stajnia", 999, 240,"miekka",null);
+
+
