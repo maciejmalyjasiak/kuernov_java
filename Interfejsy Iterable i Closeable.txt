@@ -1,0 +1,58 @@
+
+
+Interfejsy Iterable i Closeable
+
+1.
+public interface Closeable
+Closeable jest źródłem bądź kierunkiem danych, do których nie ma być dostępu
+Wywoływana jest metoda close w celu zwolnienia zasobów przechowywanych przez obiekt, którymi mogą być otwarte pliki.
+Metoda:
+close() -Zamyka ten strumień i uwalnia wszelkie związane z nim zasoby systemowe, może być wywoływana kilka razy bez wpływu na Closeable.
+
+Ex.
+private static void closeQuitely(Closeable stream) {
+    try {
+        if (stream != null)
+            stream.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+ 
+
+
+
+
+2.
+public interface Iterable
+Służy do operacji na obiektach. Elementy klasy pobierane zostają po kolei.  Implementacja tego interfejsu pozwala na dostęp do  pętli „For-each”.
+Umożliwia ponadto iterowanie po między innymi tablicach. Pętla for-each może być stosowana ze wszystkimi klasami, które implementują interfejs Iterable.
+Metody:
+default void forEach(Consumer<? super T> action)- Wykonuje podaną akcję dla każdego elementu Iterable, dopóki wszystkie elementy nie zostaną przetworzone lub akcja wygeneruje wyjątek.
+Public Iterator iterator() - Zwraca iterator. 
+public boolean hasNext() – Zwraca true jeżeli iteracja zawiera więcej elementów.
+public E next() - Zwraca następny element w iteracji
+Ex.
+Public class Juice
+{
+	Public Juice()
+{
+	ArrayList<Integer> aj = new ArrayList<Integer>();
+	aj.add(10);
+	aj.add(12);
+aj.add(64);
+Iterator<Integer> a = aj.iterator();
+While(a.hasNext())
+{
+	System.out.println(a.next());
+}
+}
+Public static void main(String args[])
+{
+	Juice a = new Juice();
+}
+}
+
+Są to dwa różne interfejsy. 
+Closeable zawsze zamyka to co chcemy zamknąć, a Iterable można modyfikować np. poprzez  dodawanie swoich iteratorów.
+
