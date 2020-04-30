@@ -1,0 +1,65 @@
+1.
+Program pierwszy weryfikuje czy przynajmniej jedna z dwóch podanych temperatur jest mniejsza od 100 i zwraca prawdę bądź fałsz.
+
+W klasie Z1 utworzona metoda sprawdzTemperature na wejsciu pobiera 2 temperatury.
+Defaultowo boolean ustawiany jest na false.
+Jeśli jedna bądz druga jest mniejsza od 100 ustawia boolean na true.
+Przeprowadzone zostały dwa testy w klasie Z1Test.
+
+test:
+Asercja assertTrue służy potwierdzaniu prawdy.
+W tescie tym spodziewam się, że metoda sprawdzTemperature zwróci true przy wskazanych wartosciach i faktycznie się tak zachowuje.
+
+test2:
+Asercja assertFalse służy zapewnianiu, że podany warunek jest fałszywy.
+W tescie tym spodziewam się, że metoda sprawdzTemperature przy wskazanych wartościach, zweryfikuje je jako niezgodne z założeniami.
+
+
+2.
+Celem drugiego programu jest zwracanie prawdy, jeżeli sekwencja 1, 2, 3 pojawi się gdzieś w tablicy liczb całkowitych.
+W klasie Z2 znajduje się metoda sprawdzTablice. Inicjuje ona tablice liczb całkowitych. W pętli for program weryfikuje czy 3 kolejne liczby tablicy znajdują się w poszukiwanej
+sekwencji.
+
+Przeprowadzone zostały dwa testy w klasie Z2Test.
+
+test:
+Asercja assertTrue służy potwierdzaniu prawdy.
+Test zwraca true, jeżeli sekwencja liczb 1, 2, 3 pojawi się w programie.
+
+test2:
+Asercja assertFalse służy zapewnianiu, że podany warunek jest fałszywy.
+Zwraca false jeżeli, ta sekwencja nie zostanie przedstawiona w programie.
+
+3.
+Założeniem trzeciego programu było, zwracanie połowy znaków ze Stringa.
+String podawany jest na wejsciu w metodzie ZwrocPolowe w klasie Z3.
+W dalszej części metoda ta zmniejsza ciąg znaków o połowę.
+
+Przeprowadzone zostały dwa testy w klasie Z3Test.
+
+test:
+Asercja assertEquals z założenia sprawdza czy obiekty są sobie równe.
+W asercji wprowadzam wartość oczekiwaną oraz wartość, która ma zostać zmieniona.
+Test sprawdza czy podany string będzie tym, jakiego oczekujemy(czyli połową wejściowego).
+
+test2:
+Ponownie wykorzystana asercja assertEquals
+W teście tym podany string zawiera nieparzystą liczbę znaków.
+Test sprawdza, że w przypadku nieparzystej liczby znaków, wyjściowa połowa stringa będzie zwężona o 1 znak.
+
+4.
+Czwarty program służy do zwrcania nowej tablicy z elementami w odwrotnej kolejności.
+W klasie Z4 znajduje się metoda odwrocTablice, która inicjuje tablice do odwrócenia a następnie, tworzy nową tablicę która będzie odwróconą tablicą wejściową. 
+
+W klasie Z4Test przeprowadzone zostały 2 testy.
+
+test:
+podajemy w nich tablicę do odwrócenia, jak i tą której się spodziewamy.
+asercja assertArrayEquals zapewnia, że dwie tablice są równe.
+Test sprawdza czy elementy elementy tablicy odwróconej, są równe tablicy początkowej po odwróceniu.
+Jeżeli tak faktycznie jest to test został pokonany pomyślnie
+
+test2:
+Ponownie występuje asercja assertArrayEquals.
+Ten test jest identyczny jak poprzedni, jedynie liczby są "bardziej rozrzucone" niż (1, 2, 3, 4, 5, 6).
+
