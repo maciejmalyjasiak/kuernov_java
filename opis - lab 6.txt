@@ -1,0 +1,18 @@
+Stworzony program polegał na pracy ze spring framework i opierał się na kodzie z instrukcji.
+Aby działał należy uruchomić go z klasy "Application".
+W celu zamiany endpointa, czyli adresu url pod którym wyświetlane zostają wpisywane w kodzie dane z bazowego "greeting" na "bye",
+w klasie GreetingController w adnotacji @RequestMapping zmieniono zawarość path. Drugie zadanie opierało się na dodaniu nowego endpointa tak by oba działały.
+W tym celu skopiowana została cała zawartość adnotacji @RequestMapping i została dodana po raz drugi jedynie ze zmienionym endpointem nazwanym "endpoint". 
+Aktualnie program ma więc ustawione dwa działające endpointy. 
+Program zaprojektowano w taki sposób, aby wyświetlał losowy wiek osoby i zakres tego działania ustalony został na do 80 lat.
+Po odświeżeniu strony wiek się zamienia. Umożliwione zostało wprowadzanie imienia zdalnie w adresie url.
+W przypadku gdy w adresie url nie wpiszemy nic, wyskoczy ustawiona wartosc defaultowa. W innym wypadku wyskoczy wpisane przez nas imię.
+Przedstawia się to w sposób następujący dla "http://localhost:8080/endpoint" otrzymamy rezultat ""name":"Not entered"",
+po wpisaniu np. "http://localhost:8080/endpoint?name=Igor" otrzymamy ""name":"Igor"".
+W programie zaimplementowana została również metoda sprawdzająca, czy wprowadzone imię jest żeńskie lub męskie.
+Metoda ta polega na porównywaniu ostatniej litery imienia i sprawdzania czy imię to kończy się na literę "a".
+W przypadku gdy program potwierdzi, że imię kończy się na literę "a" zwróci wartość "women" w polu "gender", jeśli imię kończy się na jakąkolwiek inną literę w polu "gender" wyświetlona zostanie zawartość "men".
+Dodany został wyjątek od imienia Kuba, które pomimo że kończy się na literę "a" i tak zwróci wartość "men".
+
+
+
